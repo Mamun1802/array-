@@ -2,18 +2,21 @@
 #include<math.h>
 
 int main(){
-   int arr[]={1,3,4,5};
-   for(int i=1; i<=5; i++){
+   int arr[]={1,2,4,5};
+   int n=5;
+   int originalSum,actualSum=0;
 
-      //Condition to find the missing number
-      if(arr[i-1]==i){
-       continue;
-      }
+   originalSum=(n*(n+1))/2;
+   for(int i=0;i<4;i++){
+    actualSum=actualSum+arr[i];
+   }
+
+   //find the missing number
+    int missingNumber=originalSum-actualSum;
+
 
       //Print the missing number
-      printf("The missing number is = %d",i);
-      break;
-   }
+      printf("The missing number is = %d",missingNumber);
 
  return 0;
 }
